@@ -46,7 +46,7 @@ begin
         begin
           eng.AddFood(FoodName.Edit.Text, FoodComment.Edit.Text,
             BadgeColor.Color);
-          eng.AddColor(FoodName.Edit.Text, BadgeColor.Color);
+          ColorEng.AddColor(FoodName.Edit.Text, BadgeColor.Color);
           FoodName.Edit.Text := '';
           FoodComment.Edit.Text := '';
           Generic.GotoVisibleTab(1);

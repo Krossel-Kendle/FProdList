@@ -560,7 +560,9 @@ object FoodsForm: TFoodsForm
           TextSettings.Font.StyleExt = {00030000000000000004000000}
         end
         inherited Anim: TFloatAnimation
+          Inverse = True
           OnProcess = frNotifyAnimProcess
+          OnFinish = frNotifyAnimFinish
         end
       end
     end

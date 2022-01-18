@@ -16,7 +16,8 @@ uses
   frPrimaryEdit in 'frames\frPrimaryEdit.pas' {PrimaryEdit: TFrame},
   frMenuItem in 'frames\frMenuItem.pas' {flElement: TFrame},
   frNotify in 'frames\frNotify.pas' {Notify: TFrame},
-  ColorEngine in 'ColorEngine.pas';
+  ColorEngine in 'ColorEngine.pas',
+  NotifyEngine in 'NotifyEngine.pas';
 
 {$R *.res}
 

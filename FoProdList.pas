@@ -12,7 +12,7 @@ uses
   FMX.Colors, FMX.Memo.Types, FMX.ScrollBox, FMX.Memo, frPrimaryEdit,
   FMX.VirtualKeyboard, FMX.Platform, FMX.ComboEdit, System.UIConsts,
   System.Threading,{$IFDEF Android} Androidapi.Helpers, FMX.Helpers.Android,
-  Androidapi.JNI.GraphicsContentViewText,{$ENDIF} frNotify;
+  Androidapi.JNI.GraphicsContentViewText,{$ENDIF} frNotify, ColorEngine, NotifyEngine;
 
 type
   TFoodsForm = class(TForm)
@@ -104,11 +104,14 @@ type
     procedure sbAboutClick(Sender: TObject);
     procedure MainHeaderExpander1Click(Sender: TObject);
     procedure frNotifyAnimProcess(Sender: TObject);
+    procedure frNotifyAnimFinish(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
     eng: TFoodEngine;
+    ColorEng: TColorEngine;
+    NotifyEng: TNotifyEngine;
   end;
 
 var
@@ -199,7 +202,7 @@ begin
     begin
       var
         Colore: String;
-      Colore := eng.GetColor(FoodName.Edit.Text);
+      Colore := ColorEng.GetColor(FoodName.Edit.Text);
       if Colore <> '' then
       begin
         Colore := '#' + Colore;
@@ -291,6 +294,11 @@ begin
   end;
 end;
 
+procedure TFoodsForm.frNotifyAnimFinish(Sender: TObject);
+begin
+frNotify.Caption.Visible := true;
+end;
+
 procedure TFoodsForm.frNotifyAnimProcess(Sender: TObject);
 begin
   frNotify.Height := frNotify.Background.Height;
@@ -327,7 +335,9 @@ end;
 procedure TFoodsForm.SingleAfterShowTimer(Sender: TObject);
 begin
   Cart := TFoodItems.Create;
-  eng := TFoodEngine.Create(3);
+  eng := TFoodEngine.Create(3);    //Движок записей
+  ColorEng := TColorEngine.Create; //Движок цветовых подсказок
+  NotifyEng := TNotifyEngine.Create;
   lbHello.Text := '' + eng.Settings.UserName;
   SingleAfterShow.Enabled := false;
 end;

@@ -14,7 +14,6 @@ uses
 procedure ExecMethod(MethodName: string; const Args: array of TValue);
 procedure ShowNotify(Msg: String); overload;
 procedure ShowNotify(Msg: string; Color: string); overload;
-procedure HideNotify(Delay: integer);
 
 implementation
 
@@ -32,47 +31,9 @@ begin
       M.Invoke(TMethodsBook.Create, Args)
 end;
 
-procedure HideNotify(Delay: integer);
-var
-  task: ITask;
-begin
-  task := TTask.Create(
-    procedure()
-    begin
-      Sleep(Delay);
-      with FoodsForm.frNotify do
-      begin
-        if not Anim.Inverse then // Если еще не убрали нотификацию
-        begin
-          Anim.Inverse := true;
-          Anim.Start;
-        end;
-      end;
-    end);
-  task.Start;
-end;
-
 procedure ShowNotify(Msg: string; Color: string);
-var
-  task: ITask;
 begin
-  task := TTask.Create(
-    procedure()
-    begin
-      with FoodsForm.frNotify do
-      begin
-        while not Anim.Inverse do
-          HideNotify(1);
-
-        Caption.Text := Msg;
-        Background.Fill.Color := StringToAlphaColor(Color);
-        Anim.StopValue := Caption.Height + 6;
-        Anim.Inverse := false;
-        Anim.Start;
-      end;
-    end);
-  task.Start;
-  HideNotify(3000);
+  FoodsForm.NotifyEng.AddQueue(Msg,Color);
 end;
 
 procedure ShowNotify(Msg: string);

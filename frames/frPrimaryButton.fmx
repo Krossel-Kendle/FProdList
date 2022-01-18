@@ -1,0 +1,40 @@
+object PrimaryButton: TPrimaryButton
+  Size.Width = 349.000000000000000000
+  Size.Height = 62.000000000000000000
+  Size.PlatformDefault = False
+  object Background: TRectangle
+    Align = Client
+    Fill.Color = xFF6A86A4
+    Margins.Left = 9.000000000000000000
+    Margins.Right = 9.000000000000000000
+    Margins.Bottom = 12.000000000000000000
+    Size.Width = 331.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 20.000000000000000000
+    YRadius = 20.000000000000000000
+    object Button: TSpeedButton
+      Align = Client
+      StyledSettings = [Family, Style]
+      Size.Width = 331.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Text'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.FontColorForState.Normal = claWhite
+      TextSettings.FontColorForState.Hot = claSnow
+      TextSettings.FontColorForState.Pressed = claSeashell
+      TextSettings.FontColorForState.Focused = claWhite
+      OnClick = ButtonClick
+    end
+    object Shadow: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.500000000000000000
+      Opacity = 0.300000011920929000
+      ShadowColor = claBlack
+    end
+  end
+end

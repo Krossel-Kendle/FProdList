@@ -1,0 +1,82 @@
+object PrimaryEdit: TPrimaryEdit
+  Size.Width = 431.000000000000000000
+  Size.Height = 67.000000000000000000
+  Size.PlatformDefault = False
+  object Background: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 4.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Size.Width = 425.000000000000000000
+    Size.Height = 63.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    XRadius = 6.000000000000000000
+    YRadius = 6.000000000000000000
+    object Shadow: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.200000002980232200
+      Opacity = 0.100000001490116100
+      ShadowColor = claBlack
+    end
+    object Header: TLayout
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 7.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 7.000000000000000000
+      Size.Width = 420.000000000000000000
+      Size.Height = 16.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Caption: TLabel
+        Align = Client
+        StyledSettings = [Family, FontColor]
+        Size.Width = 420.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.Font.StyleExt = {00030000000000000004000000}
+        TextSettings.VertAlign = Leading
+        Text = 'Caption'
+        TabOrder = 0
+      end
+      object Help: TLabel
+        Align = Right
+        StyledSettings = [Size]
+        HitTest = True
+        Margins.Right = 7.000000000000000000
+        Position.X = 368.000000000000000000
+        Size.Width = 51.000000000000000000
+        Size.Height = 23.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Showcard Gothic'
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claBlueviolet
+        TextSettings.HorzAlign = Trailing
+        Text = '?'
+        Visible = False
+        TabOrder = 1
+        OnClick = HelpClick
+      end
+    end
+    object Edit: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      OnChangeTracking = EditChangeTracking
+      Align = Client
+      Margins.Left = 3.000000000000000000
+      Margins.Top = 3.000000000000000000
+      Margins.Right = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Size.Width = 419.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 415.000000000000000000
+      Viewport.Height = 30.000000000000000000
+    end
+  end
+end

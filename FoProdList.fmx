@@ -1,0 +1,674 @@
+object FoodsForm: TFoodsForm
+  Left = 0
+  Top = 0
+  Caption = #1057#1087#1080#1089#1086#1082' '#1087#1086#1082#1091#1087#1086#1082
+  ClientHeight = 409
+  ClientWidth = 354
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  OnHide = FormHide
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 3
+  object DeprecatorLayout: TLayout
+    Align = Client
+    HitTest = True
+    Size.Width = 354.000000000000000000
+    Size.Height = 409.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    OnClick = DeprecatorLayoutClick
+  end
+  object generalBackground: TLayout
+    Align = Client
+    Size.Width = 354.000000000000000000
+    Size.Height = 409.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ClientBack: TRectangle
+      Align = Client
+      Fill.Color = xFFF1F5F9
+      Size.Width = 354.000000000000000000
+      Size.Height = 409.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object Generic: TTabControl
+      Align = Client
+      Size.Width = 354.000000000000000000
+      Size.Height = 409.000000000000000000
+      Size.PlatformDefault = False
+      TabHeight = 49.000000000000000000
+      TabIndex = 1
+      TabOrder = 0
+      TabPosition = None
+      OnChange = GenericChange
+      Sizes = (
+        354s
+        409s
+        354s
+        409s
+        354s
+        409s)
+      object tiAddFood: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tiAddFood'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object rtFoodAdHeader: TRectangle
+          Align = Top
+          Fill.Color = xFF6A86A4
+          HitTest = False
+          Size.Width = 354.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object lFoodAddHeader: TLayout
+            Align = Top
+            Size.Width = 354.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object sbFoodBack: TSpeedButton
+              Align = Left
+              IconTintColor = claWhite
+              Position.Y = 6.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'priortoolbutton'
+              Text = 'Back'
+              OnClick = BackClick
+            end
+            object lbFoodAddHeaderText: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Size.Width = 306.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #1055#1086#1087#1086#1083#1085#1077#1085#1080#1077' '#1089#1087#1080#1089#1082#1072
+              TabOrder = 1
+            end
+          end
+          object ShadowEffect2: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.100000001490116100
+            ShadowColor = claBlack
+          end
+        end
+        inline btFoodAdd: TPrimaryButton
+          Align = Bottom
+          Hint = 'SaveFood'
+          Position.Y = 347.000000000000000000
+          Size.Width = 354.000000000000000000
+          Size.Height = 62.000000000000000000
+          Size.PlatformDefault = False
+          inherited Background: TRectangle
+            Size.Width = 336.000000000000000000
+            inherited Button: TSpeedButton
+              Size.Width = 336.000000000000000000
+              Text = #1044#1086#1073#1072#1074#1080#1090#1100
+              OnClick = btFoodAddButtonClick
+            end
+          end
+        end
+        object ScrollBox1: TScrollBox
+          Align = Client
+          Size.Width = 354.000000000000000000
+          Size.Height = 287.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Viewport.Width = 354.000000000000000000
+          Viewport.Height = 287.000000000000000000
+          object rtColorer: TRectangle
+            Align = Top
+            Fill.Color = claWhite
+            Margins.Left = 3.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 3.000000000000000000
+            Position.X = 3.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 348.000000000000000000
+            Size.Height = 76.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            XRadius = 6.000000000000000000
+            YRadius = 6.000000000000000000
+            object ShadowEffect4: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.200000002980232200
+              Opacity = 0.100000001490116100
+              ShadowColor = claBlack
+            end
+            object lColorer: TLayout
+              Align = Client
+              Size.Width = 348.000000000000000000
+              Size.Height = 76.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object Label2: TLabel
+                Align = Top
+                StyledSettings = [Family, Size]
+                Margins.Left = 5.000000000000000000
+                Margins.Top = 7.000000000000000000
+                Margins.Right = 5.000000000000000000
+                Position.X = 5.000000000000000000
+                Position.Y = 7.000000000000000000
+                Size.Width = 338.000000000000000000
+                Size.Height = 23.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.StyleExt = {00060000000000000004000000}
+                Text = #1062#1074#1077#1090' '#1073#1077#1081#1076#1078#1072
+                TabOrder = 0
+              end
+              object BadgeColor: TComboColorBox
+                Align = Client
+                Color = xFFA3E635
+                Margins.Left = 7.000000000000000000
+                Margins.Right = 7.000000000000000000
+                Margins.Bottom = 2.000000000000000000
+                Size.Width = 334.000000000000000000
+                Size.Height = 32.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'comboboxstyle'
+                TabOrder = 1
+              end
+            end
+          end
+          inline FoodName: TPrimaryEdit
+            Align = Top
+            Position.Y = 81.000000000000000000
+            Size.Width = 354.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            inherited Background: TRectangle
+              Size.Width = 348.000000000000000000
+              inherited Header: TLayout
+                Size.Width = 343.000000000000000000
+                inherited Caption: TLabel
+                  Size.Width = 343.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  Text = #1053#1072#1079#1074#1072#1085#1080#1077' '#1090#1086#1074#1072#1088#1072
+                end
+                inherited Help: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+              inherited Edit: TMemo
+                StyledSettings = [Family, Size, Style]
+                OnChangeTracking = FoodNameEditChangeTracking
+                Size.Width = 342.000000000000000000
+                Viewport.Width = 342.000000000000000000
+                Viewport.Height = 34.000000000000000000
+              end
+            end
+          end
+          inline FoodComment: TPrimaryEdit
+            Align = Top
+            Position.Y = 148.000000000000000000
+            Size.Width = 354.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            inherited Background: TRectangle
+              Size.Width = 348.000000000000000000
+              inherited Header: TLayout
+                Size.Width = 343.000000000000000000
+                inherited Caption: TLabel
+                  Size.Width = 343.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  Text = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081' '#1082' '#1090#1086#1074#1072#1088#1091
+                end
+                inherited Help: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+              inherited Edit: TMemo
+                Size.Width = 342.000000000000000000
+                Viewport.Width = 342.000000000000000000
+                Viewport.Height = 34.000000000000000000
+              end
+            end
+          end
+        end
+      end
+      object tiFoods: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tiFoods'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object Scroller: TScrollBox
+          Align = Client
+          Padding.Bottom = 62.000000000000000000
+          Size.Width = 354.000000000000000000
+          Size.Height = 287.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 354.000000000000000000
+          Viewport.Height = 287.000000000000000000
+          object Rectangle1: TRectangle
+            Align = Top
+            Fill.Color = claNull
+            Size.Width = 354.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+          end
+        end
+        object SubheadBack: TRectangle
+          Align = Top
+          Fill.Color = xFF6A86A4
+          HitTest = False
+          Size.Width = 354.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object SubheadShadow: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.100000001490116100
+            ShadowColor = claBlack
+          end
+          object SubheadLayout: TLayout
+            Align = Top
+            Size.Width = 354.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lbHello: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Margins.Left = 12.000000000000000000
+              Margins.Right = 12.000000000000000000
+              Size.Width = 186.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #1055#1088#1080#1074#1077#1090', Anonymous'
+              TabOrder = 0
+            end
+            object sbSubHeadExpandButton: TSpeedButton
+              Align = Left
+              IconTintColor = claWhite
+              Position.Y = 6.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'arrowdowntoolbutton'
+              Text = 'sbSubHeadExpandButton'
+              OnClick = MainHeaderExpander1Click
+            end
+            object btExit: TSpeedButton
+              Align = Right
+              IconTintColor = claWhite
+              Position.X = 306.000000000000000000
+              Position.Y = 6.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'escapetoolbutton'
+              Text = 'btExit'
+              OnClick = btExitClick
+            end
+            object Refresh: TSpeedButton
+              Align = Right
+              IconTintColor = claWhite
+              Position.X = 258.000000000000000000
+              Position.Y = 6.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'refreshtoolbutton'
+              Text = 'Refresh'
+              OnClick = RefreshClick
+            end
+          end
+          object SubheadMenuButtons: TLayout
+            Align = Client
+            Size.Width = 430.000000000000000000
+            Size.Height = 0.000000000000000000
+            Size.PlatformDefault = False
+            Visible = False
+            TabOrder = 1
+            object sbSettings: TSpeedButton
+              Align = Top
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 430.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              Text = #1053#1072#1089#1090#1088#1086#1081#1082#1080
+              TextSettings.FontColor = claWhite
+              OnClick = sbSettingsClick
+            end
+            object sbAbout: TSpeedButton
+              Align = Top
+              StyledSettings = [Family, Size, Style]
+              Position.Y = 48.000000000000000000
+              Size.Width = 430.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              Text = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
+              TextSettings.FontColor = claWhite
+              OnClick = sbAboutClick
+            end
+          end
+          object SubheadAnimation: TFloatAnimation
+            AnimationType = InOut
+            Duration = 0.150000005960464500
+            OnFinish = SubheadAnimationFinish
+            PropertyName = 'Size.Height'
+            StartValue = 60.000000000000000000
+            StopValue = 156.000000000000000000
+          end
+        end
+        inline batAddFood: TPrimaryButton
+          Align = Bottom
+          Hint = 'AddFood'
+          Position.Y = 347.000000000000000000
+          Size.Width = 354.000000000000000000
+          Size.Height = 62.000000000000000000
+          Size.PlatformDefault = False
+          inherited Background: TRectangle
+            Size.Width = 336.000000000000000000
+            inherited Button: TSpeedButton
+              Size.Width = 336.000000000000000000
+              Size.Height = 48.000000000000000000
+              Text = #1044#1086#1073#1072#1074#1080#1090#1100' '#1090#1086#1074#1072#1088
+            end
+          end
+        end
+      end
+      object tiSettings: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tiSettings'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object HeadBack: TRectangle
+          Align = Top
+          Fill.Color = xFF6A86A4
+          HitTest = False
+          Size.Width = 354.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          object HeadLayout: TLayout
+            Align = Top
+            Size.Width = 354.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Back: TSpeedButton
+              Align = Left
+              IconTintColor = claWhite
+              Position.Y = 6.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'priortoolbutton'
+              Text = 'Back'
+              OnClick = BackClick
+            end
+            object lbSettings: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Size.Width = 306.000000000000000000
+              Size.Height = 60.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              TextSettings.FontColor = claWhite
+              Text = #1053#1072#1089#1090#1088#1086#1081#1082#1080
+              TabOrder = 1
+            end
+          end
+          object ShadowEffect1: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.100000001490116100
+            ShadowColor = claBlack
+          end
+        end
+        object sbSaveScroll: TScrollBox
+          Align = Client
+          Size.Width = 354.000000000000000000
+          Size.Height = 287.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 354.000000000000000000
+          Viewport.Height = 287.000000000000000000
+          inline edUser: TPrimaryEdit
+            Align = Top
+            Size.Width = 354.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            inherited Background: TRectangle
+              Size.Width = 348.000000000000000000
+              inherited Header: TLayout
+                Size.Width = 343.000000000000000000
+                inherited Caption: TLabel
+                  Size.Width = 343.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  Text = #1048#1084#1103' '#1087#1086#1083#1100#1079#1086#1074#1072#1090#1077#1083#1103
+                end
+                inherited Help: TLabel
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                end
+              end
+              inherited Edit: TMemo
+                KeyboardType = URL
+                OnChangeTracking = edUserEditChangeTracking
+                Size.Width = 342.000000000000000000
+                Viewport.Width = 342.000000000000000000
+                Viewport.Height = 34.000000000000000000
+              end
+            end
+          end
+          inline edUID: TPrimaryEdit
+            Align = Top
+            Position.Y = 67.000000000000000000
+            Size.Width = 354.000000000000000000
+            Size.Height = 67.000000000000000000
+            Size.PlatformDefault = False
+            inherited Background: TRectangle
+              Size.Width = 348.000000000000000000
+              inherited Header: TLayout
+                Size.Width = 343.000000000000000000
+                inherited Caption: TLabel
+                  Size.Width = 285.000000000000000000
+                  TextSettings.Font.StyleExt = {00060000000000000004000000}
+                  Text = 'Union ID'
+                end
+                inherited Help: TLabel
+                  Hint = 
+                    'Union ID - '#1101#1090#1086' "'#1080#1076#1077#1085#1090#1080#1092#1080#1082#1072#1090#1086#1088' '#1086#1073#1098#1077#1076#1080#1085#1077#1085#1080#1103'". '#1042#1099' '#1084#1086#1078#1077#1090#1077' '#1074#1074#1077#1089#1090#1080' '#1090#1072#1082 +
+                    #1086#1081' '#1078#1077' '#1085#1072' '#1076#1088#1091#1075#1080#1093' '#1091#1089#1090#1088#1086#1081#1089#1090#1074#1072#1093' '#1076#1083#1103' '#1089#1080#1085#1093#1088#1086#1085#1080#1079#1072#1094#1080#1080' '#1089#1087#1080#1089#1082#1072' '#1087#1086#1082#1091#1087#1086#1082'.'
+                  Position.X = 285.000000000000000000
+                  Size.Height = 16.000000000000000000
+                  TextSettings.Font.StyleExt = {00070000000000000004000000}
+                  Visible = True
+                end
+              end
+              inherited Edit: TMemo
+                Size.Width = 342.000000000000000000
+                Viewport.Width = 342.000000000000000000
+                Viewport.Height = 34.000000000000000000
+              end
+            end
+          end
+        end
+        inline btSave: TPrimaryButton
+          Align = Bottom
+          Hint = 'SaveSettings'
+          Position.Y = 347.000000000000000000
+          Size.Width = 354.000000000000000000
+          Size.Height = 62.000000000000000000
+          Size.PlatformDefault = False
+          inherited Background: TRectangle
+            Size.Width = 336.000000000000000000
+            inherited Button: TSpeedButton
+              Size.Width = 336.000000000000000000
+              Text = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+            end
+          end
+        end
+      end
+    end
+    inline frNotify: TNotify
+      Align = Top
+      Size.Width = 354.000000000000000000
+      Size.Height = 0.000000000000000000
+      Size.PlatformDefault = False
+      inherited Background: TRectangle
+        Size.Width = 354.000000000000000000
+        inherited Caption: TLabel
+          Size.Width = 354.000000000000000000
+          TextSettings.Font.StyleExt = {00030000000000000004000000}
+        end
+        inherited Anim: TFloatAnimation
+          OnProcess = frNotifyAnimProcess
+        end
+      end
+    end
+  end
+  object WebSync: TTimer
+    Enabled = False
+    Interval = 5000
+    OnTimer = WebSyncTimer
+    Left = 632
+    Top = 248
+  end
+  object VisualSync: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = VisualSyncTimer
+    Left = 632
+    Top = 193
+  end
+  object AfterShow: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = AfterShowTimer
+    Left = 632
+    Top = 137
+  end
+  object genColor: TBrushObject
+    StyleName = 'genColor'
+    Brush.Color = xFF6366F1
+    Left = 568
+    Top = 80
+  end
+  object GradPrimary: TBrushObject
+    StyleName = 'GradPrimary'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFF3B82F6
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFFA855F7
+        Offset = 1.000000000000000000
+      end>
+    Brush.Gradient.StartPosition.X = 0.850103795528411900
+    Brush.Gradient.StartPosition.Y = 1.000000000000000000
+    Brush.Gradient.StopPosition.X = 0.149896204471588100
+    Brush.Gradient.StopPosition.Y = 0.000000003202160315
+    Left = 568
+    Top = 128
+  end
+  object WhiteBackground: TBrushObject
+    StyleName = 'WhiteBackground'
+    Brush.Color = xFFF1F5F9
+    Left = 568
+    Top = 176
+  end
+  object DarkBackground: TBrushObject
+    StyleName = 'DarkBackground'
+    Brush.Color = xFF0F172A
+    Left = 568
+    Top = 224
+  end
+  object WhiteBackGradient: TBrushObject
+    StyleName = 'WhiteBackGradient'
+    Brush.Kind = Gradient
+    Brush.Gradient.Points = <
+      item
+        Color = xFFCFFAFE
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFFE0F2FE
+        Offset = 0.223602488636970500
+      end
+      item
+        Color = xFFDBEAFE
+        Offset = 0.450310558080673200
+      end
+      item
+        Color = xFFE0E7FF
+        Offset = 0.745341598987579300
+      end
+      item
+        Color = xFFEDE9FE
+        Offset = 0.996894419193267800
+      end>
+    Brush.Gradient.StopPosition.X = 1.000000000000000000
+    Left = 568
+    Top = 272
+  end
+  object SingleAfterShow: TTimer
+    Interval = 1
+    OnTimer = SingleAfterShowTimer
+    Left = 632
+    Top = 76
+  end
+  object KbdLayout: TLayout
+    Align = Bottom
+    Position.Y = 409.000000000000000000
+    Size.Width = 354.000000000000000000
+    Size.Height = 0.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+  end
+  object SingleColorAccent: TBrushObject
+    StyleName = 'SingleColorAccent'
+    Brush.Color = xFF6A86A4
+    Left = 568
+    Top = 320
+  end
+end

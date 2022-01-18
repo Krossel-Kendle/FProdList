@@ -1,0 +1,54 @@
+object Notify: TNotify
+  Size.Width = 449.000000000000000000
+  Size.Height = 25.000000000000000000
+  Size.PlatformDefault = False
+  object Background: TRectangle
+    Align = Top
+    Fill.Color = xFF2ECC71
+    Size.Width = 449.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object FrameShadow: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.200000002980232200
+      Opacity = 0.100000001490116100
+      ShadowColor = claBlack
+      Enabled = False
+    end
+    object Caption: TLabel
+      Align = Top
+      AutoSize = True
+      StyledSettings = [Family]
+      Margins.Top = 3.000000000000000000
+      Margins.Bottom = 3.000000000000000000
+      Position.Y = 3.000000000000000000
+      Size.Width = 449.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00030000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = #1042#1085#1080#1084#1072#1085#1080#1077'!'
+      TabOrder = 0
+      object TextShadow: TShadowEffect
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.150000005960464500
+        Opacity = 0.100000001490116100
+        ShadowColor = claBlack
+        Enabled = False
+      end
+    end
+    object Anim: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnProcess = AnimProcess
+      PropertyName = 'Height'
+      StartValue = 0.000000000000000000
+      StopValue = 25.000000000000000000
+    end
+  end
+end

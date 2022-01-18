@@ -1,0 +1,109 @@
+object FProtoComposed: TFProtoComposed
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 444
+  ClientWidth = 529
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Protoback: TRectangle
+    Align = Top
+    Fill.Color = claWhite
+    Size.Width = 529.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object ProtoBar: TLayout
+      Align = Right
+      Position.X = 474.000000000000000000
+      Size.Width = 55.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object PrtotoTrash: TSpeedButton
+        Align = Client
+        Size.Width = 55.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        OnClick = PrtotoTrashClick
+      end
+    end
+    object ProtoClient: TScrollBox
+      Align = Client
+      HitTest = False
+      Size.Width = 417.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 417.000000000000000000
+      Viewport.Height = 60.000000000000000000
+      object ProtoName: TSpeedButton
+        Align = Client
+        StyledSettings = [Family, FontColor]
+        HitTest = False
+        Margins.Bottom = -8.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 37.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'ProtoName'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.HorzAlign = Leading
+      end
+      object ProtoComment: TLabel
+        Align = Bottom
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Top = -5.000000000000000000
+        Position.Y = 24.000000000000000000
+        Size.Width = 417.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'ProtoComment'
+        TabOrder = 0
+      end
+    end
+    object ProtoPin: TLayout
+      Align = Left
+      Size.Width = 57.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object ProtoPinSub: TRectangle
+        Align = Client
+        Fill.Color = x7DA3E635
+        HitTest = False
+        Margins.Left = 18.000000000000000000
+        Margins.Top = 18.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object ProtoPinPro: TRectangle
+        Align = Client
+        Fill.Color = xFFA3E635
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 18.000000000000000000
+        Margins.Bottom = 18.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnClick = ProtoPinProClick
+      end
+    end
+    object ProtoAnim: TFloatAnimation
+      Duration = 0.200000002980232200
+      PropertyName = 'Height'
+      StartValue = 60.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+end

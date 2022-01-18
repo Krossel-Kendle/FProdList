@@ -1,0 +1,332 @@
+object foSettings: TfoSettings
+  Left = 0
+  Top = 0
+  Caption = 'Settings'
+  ClientHeight = 553
+  ClientWidth = 439
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 3
+  object ClientBack: TRectangle
+    Align = Client
+    Fill.Kind = Gradient
+    Fill.Gradient.Points = <
+      item
+        Color = xFFF0F9FF
+        Offset = 0.000000000000000000
+      end
+      item
+        Color = xFFEFF6FF
+        Offset = 0.226708069443702700
+      end
+      item
+        Color = xFFEFF6FF
+        Offset = 0.453416138887405400
+      end
+      item
+        Color = xFFEEF2FF
+        Offset = 0.742236018180847200
+      end
+      item
+        Color = xFFF5F3FF
+        Offset = 1.000000000000000000
+      end>
+    Fill.Gradient.StopPosition.X = 1.000000000000000000
+    Size.Width = 439.000000000000000000
+    Size.Height = 493.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object Scroller: TScrollBox
+      Align = Client
+      Size.Width = 439.000000000000000000
+      Size.Height = 493.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 439.000000000000000000
+      Viewport.Height = 493.000000000000000000
+      object FooterBack: TRectangle
+        Align = Bottom
+        Fill.Kind = Gradient
+        Fill.Gradient.Points = <
+          item
+            Color = xFF3B82F6
+            Offset = 0.000000000000000000
+          end
+          item
+            Color = xFFA855F7
+            Offset = 1.000000000000000000
+          end>
+        Fill.Gradient.StartPosition.X = 0.850103795528411900
+        Fill.Gradient.StartPosition.Y = 1.000000000000000000
+        Fill.Gradient.StopPosition.X = 0.149896204471588100
+        Fill.Gradient.StopPosition.Y = 0.000000003202160315
+        Margins.Left = 9.000000000000000000
+        Margins.Top = -62.000000000000000000
+        Margins.Right = 9.000000000000000000
+        Margins.Bottom = 12.000000000000000000
+        Position.X = 9.000000000000000000
+        Position.Y = 431.000000000000000000
+        Size.Width = 421.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 20.000000000000000000
+        YRadius = 20.000000000000000000
+        object BtAdd: TSpeedButton
+          Align = Client
+          StyledSettings = [Family, Style]
+          Size.Width = 421.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          Text = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = claWhite
+          TextSettings.FontColorForState.Normal = claWhite
+          TextSettings.FontColorForState.Hot = claSnow
+          TextSettings.FontColorForState.Pressed = claSeashell
+          TextSettings.FontColorForState.Focused = claWhite
+          OnClick = BtAddClick
+        end
+        object GenGradColor: TGradientAnimation
+          Duration = 0.200000002980232200
+          PropertyName = 'Fill.Gradient'
+          StartValue.Points = <
+            item
+              Color = xFF2563EB
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StartValue.StartPosition.X = 0.500000000000000000
+          StartValue.StartPosition.Y = 1.000000000000000000
+          StartValue.StopPosition.X = 0.499999970197677600
+          StartValue.StopPosition.Y = 0.000000000000000000
+          StopValue.Points = <
+            item
+              Color = claBlack
+              Offset = 0.000000000000000000
+            end
+            item
+              Color = claWhite
+              Offset = 1.000000000000000000
+            end>
+          StopValue.StartPosition.X = 0.500000000000000000
+          StopValue.StartPosition.Y = 1.000000000000000000
+          StopValue.StopPosition.X = 0.499999970197677600
+          StopValue.StopPosition.Y = 0.000000000000000000
+        end
+        object ShadowEffect3: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.699999988079071000
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+      end
+      object rtNameInput: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Top = 8.000000000000000000
+        Position.Y = 88.000000000000000000
+        Size.Width = 439.000000000000000000
+        Size.Height = 72.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object seName: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.200000002980232200
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+        object lNameInput: TLayout
+          Align = Top
+          Size.Width = 439.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label3: TLabel
+            Align = Top
+            StyledSettings = [Family, Size, FontColor]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Bottom = -7.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 434.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.StyleExt = {00060000000000000004000000}
+            Text = #1042#1072#1096#1077' '#1080#1084#1103
+            TabOrder = 0
+          end
+          object edName: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            KeyboardType = EmailAddress
+            FilterChar = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
+            Margins.Left = 7.000000000000000000
+            Margins.Right = 7.000000000000000000
+            Size.Width = 425.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            Caret.Color = claSlategray
+            KillFocusByReturn = True
+            OnChange = edNameChange
+            OnClick = edNameClick
+          end
+        end
+      end
+      object rtUIDInput: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Top = 8.000000000000000000
+        Position.Y = 8.000000000000000000
+        Size.Width = 439.000000000000000000
+        Size.Height = 72.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object seUID: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.200000002980232200
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+        object lUIDInput: TLayout
+          Align = Top
+          Size.Width = 439.000000000000000000
+          Size.Height = 72.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object edUID: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            StyleLookup = 'editstyle'
+            TabOrder = 0
+            KeyboardType = NumberPad
+            Margins.Left = 7.000000000000000000
+            Margins.Right = 7.000000000000000000
+            Size.Width = 425.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            Caret.Color = claSlategray
+            KillFocusByReturn = True
+            OnChange = edUIDChange
+            OnClick = edUIDClick
+          end
+          object Layout1: TLayout
+            Align = Top
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Bottom = -7.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 434.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label2: TLabel
+              Align = Client
+              StyledSettings = [Family, Size, FontColor]
+              Size.Width = 345.000000000000000000
+              Size.Height = 23.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00060000000000000004000000}
+              Text = 'Union ID'
+              TabOrder = 0
+            end
+            object lbUIDWhat: TLabel
+              Align = Right
+              StyledSettings = [Size]
+              HitTest = True
+              Margins.Right = 7.000000000000000000
+              Position.X = 345.000000000000000000
+              TextSettings.Font.Family = 'Showcard Gothic'
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claBlueviolet
+              TextSettings.HorzAlign = Trailing
+              Text = '?'
+              TabOrder = 1
+              OnClick = lbUIDWhatClick
+            end
+          end
+        end
+      end
+      object gShadow: TRectangle
+        Align = Center
+        Fill.Color = x3E000000
+        Size.Width = 439.000000000000000000
+        Size.Height = 709.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        Visible = False
+        OnMouseEnter = gShadowMouseEnter
+      end
+    end
+    object KbdLayout: TLayout
+      Align = Bottom
+      Position.Y = 493.000000000000000000
+      Size.Width = 439.000000000000000000
+      Size.Height = 0.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+  end
+  object HeadBack: TRectangle
+    Align = Top
+    Fill.Color = claWhite
+    HitTest = False
+    Size.Width = 439.000000000000000000
+    Size.Height = 60.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object HeadLayout: TLayout
+      Align = Top
+      Size.Width = 439.000000000000000000
+      Size.Height = 60.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Back: TSpeedButton
+        Align = Left
+        IconTintColor = claBlack
+        Position.Y = 6.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'priortoolbutton'
+        Text = 'Back'
+        OnClick = BackClick
+      end
+      object lbSettings: TLabel
+        Align = Client
+        Size.Width = 391.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        Text = #1053#1072#1089#1090#1088#1086#1081#1082#1080
+        TabOrder = 1
+      end
+    end
+    object SubheadShadow: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.200000002980232200
+      Opacity = 0.200000002980232200
+      ShadowColor = claBlack
+    end
+  end
+  object ShadowHide: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = ShadowHideTimer
+    Left = 208
+    Top = 264
+  end
+end

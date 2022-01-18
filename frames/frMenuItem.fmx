@@ -1,0 +1,104 @@
+object flElement: TflElement
+  Size.Width = 326.000000000000000000
+  Size.Height = 58.000000000000000000
+  Size.PlatformDefault = False
+  object Back: TRectangle
+    Align = Client
+    Fill.Color = claWhite
+    Size.Width = 326.000000000000000000
+    Size.Height = 58.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object RBar: TLayout
+      Align = Right
+      Position.X = 271.000000000000000000
+      Size.Width = 55.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object sbPrimary: TSpeedButton
+        Align = Client
+        Size.Width = 55.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        OnClick = sbPrimaryClick
+      end
+    end
+    object CBar: TScrollBox
+      Align = Client
+      HitTest = False
+      Size.Width = 214.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 214.000000000000000000
+      Viewport.Height = 58.000000000000000000
+      object lbName: TSpeedButton
+        Align = Client
+        StyledSettings = [Family, FontColor]
+        HitTest = False
+        Margins.Bottom = -8.000000000000000000
+        Size.Width = 214.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'lbName'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.HorzAlign = Leading
+      end
+      object lbComment: TLabel
+        Align = Bottom
+        StyledSettings = [Family, Style, FontColor]
+        Margins.Top = -5.000000000000000000
+        Position.Y = 22.000000000000000000
+        Size.Width = 214.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 14.000000000000000000
+        Text = 'lbComment'
+        TabOrder = 0
+      end
+    end
+    object LBar: TLayout
+      Align = Left
+      Size.Width = 57.000000000000000000
+      Size.Height = 58.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object PinSub: TRectangle
+        Align = Client
+        Fill.Color = x7DA3E635
+        HitTest = False
+        Margins.Left = 18.000000000000000000
+        Margins.Top = 18.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 8.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object PinPro: TRectangle
+        Align = Client
+        Fill.Color = xFFA3E635
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 8.000000000000000000
+        Margins.Right = 18.000000000000000000
+        Margins.Bottom = 18.000000000000000000
+        Size.Width = 29.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnClick = PinProClick
+      end
+    end
+    object Anim: TFloatAnimation
+      Duration = 0.200000002980232200
+      OnFinish = AnimFinish
+      PropertyName = 'Height'
+      StartValue = 60.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+end

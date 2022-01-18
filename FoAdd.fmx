@@ -1,0 +1,364 @@
+object AddForm: TAddForm
+  Left = 0
+  Top = 0
+  Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1090#1086#1074#1072#1088
+  ClientHeight = 502
+  ClientWidth = 495
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ClientBack: TRectangle
+    Align = Client
+    Fill.Color = xFFECF0F1
+    Size.Width = 495.000000000000000000
+    Size.Height = 453.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object Scroller: TScrollBox
+      Align = Client
+      Size.Width = 495.000000000000000000
+      Size.Height = 453.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 495.000000000000000000
+      Viewport.Height = 453.000000000000000000
+      object Protoback: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 86.000000000000000000
+        Size.Width = 485.000000000000000000
+        Size.Height = 76.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 12.000000000000000000
+        YRadius = 12.000000000000000000
+        object ProtoShadow: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.200000002980232200
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+        object Backpack: TLayout
+          Align = Client
+          Size.Width = 485.000000000000000000
+          Size.Height = 76.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object FoodName: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Bottom
+            TabOrder = 0
+            Position.X = 5.000000000000000000
+            Position.Y = 37.000000000000000000
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 3.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 7.000000000000000000
+            Size.Width = 475.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = FoodNameChange
+          end
+          object AddLabel: TLabel
+            Align = Top
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 475.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claDarkslategray
+            TextSettings.HorzAlign = Center
+            Text = #1053#1072#1079#1074#1072#1085#1080#1077' '#1090#1086#1074#1072#1088#1072
+            TabOrder = 1
+          end
+        end
+      end
+      object Rectangle1: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 167.000000000000000000
+        Size.Width = 485.000000000000000000
+        Size.Height = 91.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 12.000000000000000000
+        YRadius = 12.000000000000000000
+        object ShadowEffect2: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.200000002980232200
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+        object Layout1: TLayout
+          Align = Client
+          Size.Width = 485.000000000000000000
+          Size.Height = 91.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Comment: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Bottom
+            TabOrder = 0
+            Position.X = 5.000000000000000000
+            Position.Y = 52.000000000000000000
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 3.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 7.000000000000000000
+            Size.Width = 475.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+          end
+          object Label1: TLabel
+            Align = Top
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 475.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claDarkslategray
+            TextSettings.HorzAlign = Center
+            Text = #1050#1086#1084#1084#1077#1085#1090#1072#1088#1080#1081
+            TabOrder = 1
+          end
+        end
+      end
+      object Btns: TLayout
+        Align = Top
+        Position.Y = 258.000000000000000000
+        Size.Width = 495.000000000000000000
+        Size.Height = 64.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 6
+        object Rectangle2: TRectangle
+          Align = Center
+          Fill.Color = claWhite
+          HitTest = False
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Size.Width = 172.000000000000000000
+          Size.Height = 51.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 12.000000000000000000
+          YRadius = 12.000000000000000000
+          object SpeedButton2: TSpeedButton
+            Align = Client
+            Size.Width = 172.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'speedbuttonstyle'
+            Text = #1044#1086#1073#1072#1074#1080#1090#1100
+            TintColor = claSalmon
+            OnClick = SpeedButton2Click
+          end
+          object ShadowEffect3: TShadowEffect
+            Distance = 3.000000000000000000
+            Direction = 45.000000000000000000
+            Softness = 0.200000002980232200
+            Opacity = 0.200000002980232200
+            ShadowColor = claBlack
+          end
+        end
+      end
+      object Author: TLabel
+        Align = Top
+        StyledSettings = [Family]
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 7.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 329.000000000000000000
+        Size.Width = 485.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 11.000000000000000000
+        TextSettings.Font.StyleExt = {04040000000000000004000000}
+        TextSettings.FontColor = claDarkslategray
+        TextSettings.HorzAlign = Trailing
+        TextSettings.VertAlign = Leading
+        Text = #1076#1086#1073#1072#1074#1080#1090' '#1090#1086#1074#1072#1088
+        TabOrder = 1
+      end
+      object Rectangle3: TRectangle
+        Align = Top
+        Fill.Color = claWhite
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 485.000000000000000000
+        Size.Height = 76.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        XRadius = 12.000000000000000000
+        YRadius = 12.000000000000000000
+        object ShadowEffect4: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.200000002980232200
+          Opacity = 0.200000002980232200
+          ShadowColor = claBlack
+        end
+        object Layout2: TLayout
+          Align = Client
+          Size.Width = 485.000000000000000000
+          Size.Height = 76.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Label2: TLabel
+            Align = Top
+            StyledSettings = [Family, Size, Style]
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 7.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 7.000000000000000000
+            Size.Width = 475.000000000000000000
+            Size.Height = 23.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.FontColor = claDarkslategray
+            TextSettings.HorzAlign = Center
+            Text = #1062#1074#1077#1090' '#1073#1077#1081#1076#1078#1072
+            TabOrder = 0
+          end
+          object BadgeColor: TComboColorBox
+            Align = Client
+            Color = xFFA3E635
+            Margins.Left = 7.000000000000000000
+            Margins.Right = 7.000000000000000000
+            Margins.Bottom = 2.000000000000000000
+            Size.Width = 471.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'comboboxstyle'
+            TabOrder = 1
+          end
+        end
+      end
+    end
+  end
+  object HeaderBack: TRectangle
+    Align = Top
+    Fill.Color = xFF34495E
+    Size.Width = 495.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object ShadowEffect1: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 0.200000002980232200
+      ShadowColor = claBlack
+    end
+    object lbHeader: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 447.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = #1055#1086#1087#1086#1083#1085#1077#1085#1080#1077' '#1089#1087#1080#1089#1082#1072
+      TabOrder = 0
+    end
+    object SpeedButton1: TSpeedButton
+      Align = Right
+      IconTintColor = claWhite
+      Position.X = 447.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'donetoolbutton'
+      Text = 'SpeedButton1'
+      OnClick = SpeedButton1Click
+      object FillRGBEffect1: TFillRGBEffect
+        Color = claWhite
+      end
+    end
+  end
+  object BoardShow: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = BoardShowTimer
+    Left = 304
+    Top = 401
+  end
+  object LBox2: TLang
+    Lang = 'ru'
+    Left = 152
+    Top = 409
+    ResourcesBin = {
+      F900000042007500740074006F006E0031000D000A0069006E00690074000D00
+      0A0042007500740074006F006E0033000D000A00550070006400610074006500
+      0D000A00730079006E0063000D000A004100640064000D000A00470065006E00
+      6500720061006C000D000A006F006C0064000D000A00440065006C0065007400
+      65000D000A0014043E04310430043204380442044C04200042043E0432043004
+      40040D000A001F044004380432043504420420003C04380440040D000A007300
+      6200530075006200480065006100640045007800700061006E00640042007500
+      740074006F006E000D000A001D0430044104420440043E0439043A0438040D00
+      0A001E0420003F0440043E043304400430043C043C0435040D000A001D043004
+      3704320430043D0438043504200042043E0432043004400430040D000A001A04
+      3E043C043C0435043D04420430044004380439040D000A0014043E0431043004
+      3204380442044C040D000A0034043E0431043004320438044204200042043E04
+      3204300440040D000A0026043204350442042000310435043904340436043004
+      0D000A001F043E043F043E043B043D0435043D0438043504200041043F043804
+      41043A0430040D000A005300700065006500640042007500740074006F006E00
+      31000D000A0053006F0075007200630065000D000A0002000000020000005200
+      55000C01000014043E04310430043204380442044C04200042043E0432043004
+      40043D0014043E04310430043204380442044C04200042043E04320430044004
+      0D000A001F044004380432043504420420003C04380440043D001F0440043804
+      32043504420420003C04380440040D000A001D0430044104420440043E043904
+      3A0438043D001D0430044104420440043E0439043A0438040D000A001E042000
+      3F0440043E043304400430043C043C0435043D001E0420003F0440043E043304
+      400430043C043C0435040D000A001D0430043704320430043D04380435042000
+      42043E0432043004400430043D001D0430043704320430043D04380435042000
+      42043E0432043004400430040D000A001A043E043C043C0435043D0442043004
+      4004380439043D001A043E043C043C0435043D04420430044004380439040D00
+      0A0014043E04310430043204380442044C043D0014043E043104300432043804
+      42044C040D000A0034043E0431043004320438044204200042043E0432043004
+      40043D0034043E0431043004320438044204200042043E043204300440040D00
+      0A00260432043504420420003104350439043404360430043D00260432043504
+      420420003104350439043404360430040D000A001F043E043F043E043B043D04
+      35043D0438043504200041043F04380441043A0430043D001F043E043F043E04
+      3B043D0435043D0438043504200041043F04380441043A0430040D000A000200
+      000045004E00E900000014043E04310430043204380442044C04200042043E04
+      3204300440043D00410064006400200067006F006F0064000D000A001F044004
+      380432043504420420003C04380440043D00480065006C006C006F0020005700
+      6F0072006C0064000D000A001D0430044104420440043E0439043A0438043D00
+      530065007400740069006E00670073000D000A001E0420003F0440043E043304
+      400430043C043C0435043D00410062006F00750074000D000A001D0430043704
+      320430043D0438043504200042043E0432043004400430043D0047006F006F00
+      640020004E0061006D0065000D000A001A043E043C043C0435043D0442043004
+      4004380439043D0043006F006D006D0065006E0074000D000A0014043E043104
+      30043204380442044C043D004100640064000D000A0034043E04310430043204
+      38044204200042043E043204300440043D006100640064002700730020006700
+      6F006F0064000D000A0026043204350442042000310435043904340436043004
+      3D0042006100640067006500200063006F006C006F0072000D000A001F043E04
+      3F043E043B043D0435043D0438043504200041043F04380441043A0430043D00
+      41006400640020006E0065007700200067006F006F0064000D000A00}
+  end
+end

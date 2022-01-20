@@ -335,7 +335,7 @@ end;
 procedure TFoodsForm.SingleAfterShowTimer(Sender: TObject);
 begin
   Cart := TFoodItems.Create;
-  eng := TFoodEngine.Create(3);    //Движок записей
+  eng := TFoodEngine.Create;    //Движок записей
   ColorEng := TColorEngine.Create; //Движок цветовых подсказок
   NotifyEng := TNotifyEngine.Create;
   lbHello.Text := '' + eng.Settings.UserName;

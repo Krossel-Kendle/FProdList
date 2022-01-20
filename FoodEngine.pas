@@ -45,6 +45,9 @@ type
   end;
 
 type
+  FoodArr = Array of RFood;
+
+type
   TFoodEngine = class
   private
     UID: integer;
@@ -64,6 +67,7 @@ type
     procedure SaveSettings();
     procedure SaveColours();
     procedure UpdateFoodList();
+    function ParseJSONFoods(JSONText: string):FoodArr;
     procedure AddFood(name: string; comment: string; color: string); overload;
     procedure AddFood(name: string; comment: string;
       color: TAlphaColor); overload;
@@ -163,7 +167,7 @@ begin
     Foods[length(Foods) - 1].comment := comm;
     Foods[length(Foods) - 1].datetime := now;
   finally
-    NeedRebuild := true;
+    // NeedRebuild := true;
   end;
 end;
 
@@ -189,7 +193,7 @@ begin
         break;
       end;
   finally
-    NeedRebuild := true;
+    // NeedRebuild := true;
   end;
 end;
 
@@ -420,10 +424,57 @@ begin
   end;
 end;
 
+function TFoodEngine.ParseJSONFoods(JSONText: string):FoodArr;
+var
+  fs: TFormatSettings;
+  JSonValue: TJSonValue;
+  FoodsArr: FoodArr;
+begin
+  try
+    JSonValue := TJSONObject.ParseJSONValue(JSONText);
+    // TEMP load
+    // prepare datesettings
+    fs := TFormatSettings.Create;
+    fs.DateSeparator := '-';
+    fs.ShortDateFormat := 'yyyy-MM-dd';
+    fs.TimeSeparator := ':';
+    fs.ShortTimeFormat := 'hh:mm';
+    fs.LongTimeFormat := 'hh:mm:ss';
+    // start loader
+    SetLength(FoodsArr, JsonItemsCount(JSONText, 'result[].name'));
+    for var I := 0 to JsonItemsCount(JSONText, 'result[].name') - 1 do
+    begin
+      TryStrToInt(JSonValue.GetValue<string>('result[' + inttostr(I) +
+        '].foodid'), FoodsArr[I].id);
+      TryStrToInt(JSonValue.GetValue<string>('result[' + inttostr(I) +
+        '].localid'), FoodsArr[I].lid);
+      // tt := JSonValue.GetValue<string>('result[' +
+      // inttostr(I) + '].name');
+      FoodsArr[I].name :=
+        (JSonValue.GetValue<string>('result[' + inttostr(I) + '].name'));
+      tt := String(FoodsArr[I].name);
+      FoodsArr[I].comment := JSonValue.GetValue<string>('result[' + inttostr(I)
+        + '].comment');
+      FoodsArr[I].user := JSonValue.GetValue<string>('result[' + inttostr(I) +
+        '].by_user');
+      FoodsArr[I].color := JSonValue.GetValue<string>('result[' + inttostr(I) +
+        '].COLOR_CODE');
+      FoodsArr[I].datetime :=
+        StrToDateTime(JSonValue.GetValue<string>('result[' + inttostr(I) +
+        '].CHANGEDATETIME'), fs);
+      // END OF Datetime
+    end;
+    Result := FoodsArr;
+    JSonValue.Free;
+  Except
+
+  end;
+end;
+
 procedure TFoodEngine.UpdateFoodList;
 var
   task: ITask;
-  TMPFoods: array of RFood; // Временные Food
+  TMPFoods: FoodArr; // Временные Food
 begin
   NeedRebuild := false;
   task := TTask.Create(
@@ -439,10 +490,6 @@ begin
         ms: TMemoryStream; // Поток, в который пишется весь рещультат
       var
         response: string; // Конечная json строка
-      var
-        fs: TFormatSettings; // Формат времени для парсера
-      var
-        JSonValue: TJSonValue; // JSON парсер
       wr := TWebRequest.Create(false);
       temp := TStringList.Create;
       params := TStringList.Create;
@@ -456,41 +503,9 @@ begin
         temp.LoadFromStream(ms);
         response := '{"result":' + temp.Text + '}';
         // Потому что PHP JSON и DELPHI JSON отличаются
-        // Work with parser
+        TMPFoods := ParseJSONFoods(response); // Парсим JSON список
+        Sleep(1);
         try
-          JSonValue := TJSONObject.ParseJSONValue(response);
-          // TEMP load
-          // prepare datesettings
-          fs := TFormatSettings.Create;
-          fs.DateSeparator := '-';
-          fs.ShortDateFormat := 'yyyy-MM-dd';
-          fs.TimeSeparator := ':';
-          fs.ShortTimeFormat := 'hh:mm';
-          fs.LongTimeFormat := 'hh:mm:ss';
-          // start loader
-          SetLength(TMPFoods, JsonItemsCount(response, 'result[].name'));
-          for var I := 0 to JsonItemsCount(response, 'result[].name') - 1 do
-          begin
-            TryStrToInt(JSonValue.GetValue<string>('result[' + inttostr(I) +
-              '].foodid'), TMPFoods[I].id);
-            TryStrToInt(JSonValue.GetValue<string>('result[' + inttostr(I) +
-              '].localid'), TMPFoods[I].lid);
-            // tt := JSonValue.GetValue<string>('result[' +
-            // inttostr(I) + '].name');
-            TMPFoods[I].name := (JSonValue.GetValue<string>('result[' +
-              inttostr(I) + '].name'));
-            tt := String(TMPFoods[I].name);
-            TMPFoods[I].comment := JSonValue.GetValue<string>('result[' +
-              inttostr(I) + '].comment');
-            TMPFoods[I].user := JSonValue.GetValue<string>('result[' +
-              inttostr(I) + '].by_user');
-            TMPFoods[I].color := JSonValue.GetValue<string>('result[' +
-              inttostr(I) + '].COLOR_CODE');
-            TMPFoods[I].datetime :=
-              StrToDateTime(JSonValue.GetValue<string>('result[' + inttostr(I) +
-              '].CHANGEDATETIME'), fs);
-            // END OF Datetime
-          end;
           // Compare foods
           if length(TMPFoods) = length(Foods) then
           begin
@@ -519,7 +534,6 @@ begin
         params.Free;
         temp.Free;
         ms.Free;
-        JSonValue.Free;
       end;
       // Обновление элементов на форме
     end);
